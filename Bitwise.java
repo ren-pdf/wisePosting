@@ -78,8 +78,19 @@ public class Bitwise {
         return sumInt;
     }
 
-    public void notMain() {
-        System.out.println(binaryToDecimal("10001"));
+    public static void main(String[] args) {
+        int a = 42;
+        int b = 3;
+        System.out.println(a);
+        System.out.println(b);
+        String binaryA = decimalToBinary(a);
+        String binaryB = decimalToBinary(b);
+        System.out.println(binaryA);
+        System.out.println(binaryB);
+        //bitwiseAnd can be switched out for bitwiseOr, or bitwiseXor
+        String processedBinary = bitwiseAnd(binaryA,binaryB);
+        System.out.println(processedBinary);
+        System.out.println(binaryToDecimal(processedBinary));
 
     }
 }
